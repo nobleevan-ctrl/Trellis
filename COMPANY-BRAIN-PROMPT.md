@@ -40,6 +40,8 @@ A company brain is shared context that every AI agent and teammate works from: w
 
 **Step 0: Look before you build.** List what's already in `claude-cowork/Trellis`. Read whatever is relevant (docs, notes, past examples) and use it as source material. Don't overwrite or delete existing files. If something you'd create already exists, tell me and propose a merge.
 
+**Step 0.5: Keep the brain off the live site.** This project deploys to Vercel. Before you create anything, check how it deploys: the framework, the output folder, and whether files in the project root could be served publicly (for example a plain static site, or anything in `public/`). The brain holds internal information such as people, approval rules and priorities, so it must never be published. Add `brain/`, `CLAUDE.md`, `AGENTS.md` and `.claude/` to `.vercelignore` (create the file if it doesn't exist), and tell me what you found. Don't run a deploy.
+
 **Step 1: Create this structure** (create a file only if this workflow needs it; leave anything I can't maintain empty):
 
 ```
